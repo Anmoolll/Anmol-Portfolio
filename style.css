@@ -1239,6 +1239,88 @@ section {
   font-weight: var(--font-weight-medium);
 }
 
+/* Project Title Section with Buttons */
+.project-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-8);
+  gap: var(--space-16);
+}
+
+.project-title-section h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-8);
+  flex-shrink: 0;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-fast) var(--ease-standard);
+  border: 1px solid transparent;
+}
+
+.project-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.project-btn--github {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-card-border);
+}
+
+.project-btn--github:hover {
+  background: var(--color-text);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-btn--live {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.project-btn--live:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Responsive adjustments for project buttons */
+@media (max-width: 768px) {
+  .project-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+  
+  .project-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .project-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--space-4) var(--space-8);
+  }
+}
+
 /* Education Section */
 .education {
   background: var(--color-bg-6);
